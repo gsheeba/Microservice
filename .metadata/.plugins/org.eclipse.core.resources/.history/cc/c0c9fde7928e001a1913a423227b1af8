@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: bootdemo
+
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
+      
+      
+server:
+  port: 8081

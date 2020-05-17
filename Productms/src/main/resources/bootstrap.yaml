@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    config:
+      uri: ${productms.config.url:http://localhost:8888}
+      fail-fast: true  application:    name: productms
+  profiles:    active: dev

@@ -1,0 +1,17 @@
+spring:
+  h2:
+    console:
+      enabled: ${productms.console.enabled}
+      path: ${productms.console.path}
+      settings:
+        web-allow-others: true
+  datasource:
+    url: ${productms.datasource.url}
+    username: ${productms.datasource.username}
+    password: ${productms.datasource.password}
+    driver-class-name: ${productms.datasource.driver}
+  jpa:
+    show-sql: true
+    
+server:
+  port: 9094

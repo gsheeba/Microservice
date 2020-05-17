@@ -1,0 +1,28 @@
+package com.ms.boot.demo.bootdemo;
+
+import java.util.Date;
+import java.util.Random;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class GreetingRESTController {
+
+	@RequestMapping(path = "/greet/default",method = RequestMethod.GET)
+	public String defaultGreeting()
+	{
+		return "Hello " + (new Random()).nextInt();
+		
+		
+	}
+	
+	@RequestMapping(path = "/greet/{name}",method = RequestMethod.GET)
+	public GreetingViewBean greetComplex(@PathVariable String name)
+	{
+		return new GreetingViewBean("Hello","Mr",name, new Date());
+	}
+	
+}
